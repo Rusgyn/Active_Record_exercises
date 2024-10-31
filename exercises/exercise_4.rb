@@ -12,3 +12,6 @@ Store.create(name: 'Surrey', annual_revenue: 224000, mens_apparel: false, womens
 Store.create(name: 'Whistler', annual_revenue: 1900000, mens_apparel: true, womens_apparel: false)
 Store.create(name: 'Yaletown', annual_revenue: 430000, mens_apparel: true, womens_apparel: true)
 
+#2. Using the `where` class method from Active Record, fetch (a collection of) only those stores that carry men's apparel. Assign the results to a variable `@mens_stores`.
+
+@mens_stores = Store.where(mens_apparel: true)
