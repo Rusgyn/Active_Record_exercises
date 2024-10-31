@@ -15,3 +15,9 @@ Store.create(name: 'Yaletown', annual_revenue: 430000, mens_apparel: true, women
 #2. Using the `where` class method from Active Record, fetch (a collection of) only those stores that carry men's apparel. Assign the results to a variable `@mens_stores`.
 
 @mens_stores = Store.where(mens_apparel: true)
+
+#3. Loop through each of these stores and output their name and annual revenue on each line.
+@mens_stores.each do |element|
+  puts "Store #{element.name} has annual revenue of #{element.annual_revenue}"
+end
+
