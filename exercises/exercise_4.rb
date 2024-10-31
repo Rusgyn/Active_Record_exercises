@@ -21,3 +21,11 @@ Store.create(name: 'Yaletown', annual_revenue: 430000, mens_apparel: true, women
   puts "Store #{element.name} has annual revenue of #{element.annual_revenue}"
 end
 
+#4. Do another fetch but this time load stores that carry women's apparel and are generating less than $1M in annual revenue.
+@womens_stores = Store.where(womens_apparel: true).where('annual_revenue < ?', 1_000_000)
+
+@womens_stores.each do |element|
+  puts "Store #{element.name}"
+end
+
+
